@@ -14,7 +14,7 @@ adduser --disabled-password --gecos "" cowrie
 
 echo "Menginstal Cowrie..."
 su - cowrie -c "
-git clone http://github.com/cowrie/cowrie && \
+git clone http://github.com/cowrie/cowrie.git && \
 cd cowrie && \
 python3 -m venv cowrie-env && \
 source cowrie-env/bin/activate && \
