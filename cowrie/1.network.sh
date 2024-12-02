@@ -21,7 +21,7 @@ network:
     enp0s8:
         dhcp4: no
         addresses:
-          - 192.168.10.100/24
+          - 192.168.10.30/24
 #sementara         gateway4: 192.168.10.20
         nameservers:
           addresses:
