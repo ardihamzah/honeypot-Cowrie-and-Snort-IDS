@@ -4,6 +4,11 @@ libc6-dev libgcrypt20-dev zlib1g-dev libpcap-dev libpq-dev libsvn-dev libsqlite3
 
 git clone https://github.com/vanhauser-thc/thc-hydra.git
 
+./configure
+make
+sudo make install
+
+
 
 
 #Brute Force SSH
