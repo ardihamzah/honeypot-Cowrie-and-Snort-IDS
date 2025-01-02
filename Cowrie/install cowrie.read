@@ -1,0 +1,19 @@
+sudo apt-get install git python3-venv libssl-dev libffi-dev build-essential libpython3-dev python3-minimal authbind
+sudo adduser --disabled-password cowrie
+sudo su - cowrie
+git clone http://github.com/cowrie/cowrie
+cd cowrie
+python3 -m venv cowrie-env
+source cowrie-env/bin/activate
+python -m pip install --upgrade pip
+python -m pip install --upgrade -r requirements.txt
+cd etc
+cp cowrie.cfg.dist cowrie.cfg
+nano cowrie.cfg 
+# ( [telnet] enabled = true)
+exit 
+sudo iptables -t nat -A PREROUTING -p tcp --dport 22 -j REDIRECT --to-port 2222
+sudo iptables -t nat -A PREROUTING -p tcp --dport 23 -j REDIRECT --to-port 2223
+sudo su - cowrie
+cd cowrie
+bin/cowrie start

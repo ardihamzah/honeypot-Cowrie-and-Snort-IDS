@@ -22,7 +22,7 @@ network:
         dhcp4: no
         addresses:
           - 192.168.10.100/24
-#sementara         gateway4: 192.168.10.56
+#sementara         gateway4: 192.168.10.10
         nameservers:
           addresses:
             - 8.8.8.8

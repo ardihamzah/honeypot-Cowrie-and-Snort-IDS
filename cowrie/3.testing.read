@@ -1,1 +1,3 @@
-sudo tail -f /var/log/cowrie/cowrie.json
+sudo su - cowrie
+tail -f cowrie/var/log/cowrie/cowrie.json
+
